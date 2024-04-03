@@ -29,7 +29,7 @@ public class PositionSavingScript : MonoBehaviour
     void FixedUpdate()
     {
         UpdateCount++;
-        Debug.Log(UpdateCount);
+/*        Debug.Log(UpdateCount);*/
 
         tr = transform.position;
         BasePosition.Add(tr);
