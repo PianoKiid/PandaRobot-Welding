@@ -1,0 +1,152 @@
+{
+    "name": "TowerCraneActions",
+    "maps": [
+        {
+            "name": "TowerCraneAction",
+            "id": "87f03bfa-e25b-4cb0-82cf-10aabd1a8f60",
+            "actions": [
+                {
+                    "name": "TrolleyMove",
+                    "type": "Value",
+                    "id": "ade41bdb-e27f-4c27-9bbd-4fb1174d8b36",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "HookMove",
+                    "type": "Value",
+                    "id": "0a5bd910-5066-4ef0-a552-ef7083119b58",
+                    "expectedControlType": "DiscreteButton",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "JibRotate",
+                    "type": "Value",
+                    "id": "a95830dc-fd98-4ad8-8424-f5a36a85fa60",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Controller",
+                    "id": "8c810930-ce89-4332-9a48-d5d124bab41f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TrolleyMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "d9464d83-f66e-438f-b475-a82028989484",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "TrolleyMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "f4dd9999-e3e9-4abe-919e-61975c9cda35",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "TrolleyMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller",
+                    "id": "4d171148-418a-400c-b3d3-a4857c691c53",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HookMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ff2ff8e7-0ccb-4e05-971e-5ec6fece3fad",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/hat/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "HookMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "50467a4b-e88a-4b47-90fc-f8addfc6620e",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/hat/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "HookMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller",
+                    "id": "acc9f376-0993-4727-880e-4e0bfd904b0a",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JibRotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "6a8d3647-856f-485a-bb83-29fb51db0d4b",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "JibRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8dd9af63-9010-49ba-a911-8e48caa74b98",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "JibRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Thrustmaster Joystick",
+            "bindingGroup": "Thrustmaster Joystick",
+            "devices": [
+                {
+                    "devicePath": "<HID::Thrustmaster T.A320 Pilot>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
