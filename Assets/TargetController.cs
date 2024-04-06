@@ -35,7 +35,6 @@ public class TargetController : MonoBehaviour
         
         if (_trolleyInputAction.ReadValue<float>() > 0.5)
         {
-            Debug.Log("z");
             moveZ = 0.1f;
         }
         if (_trolleyInputAction.ReadValue<float>() <= 0.5 && _trolleyInputAction.ReadValue<float>() >= -0.5)
@@ -44,13 +43,11 @@ public class TargetController : MonoBehaviour
         }
         if (_trolleyInputAction.ReadValue<float>() < -0.5)
         {
-            Debug.Log("z");
             moveZ = -0.1f;
         }
 
         if (_jibInputAction.ReadValue<float>() > 0.5)
         {
-            Debug.Log("y");
             moveY = -0.1f;
         }
         if (_jibInputAction.ReadValue<float>() <= 0.5 && _jibInputAction.ReadValue<float>() >= -0.5)
@@ -59,13 +56,11 @@ public class TargetController : MonoBehaviour
         }
         if (_jibInputAction.ReadValue<float>() < -0.5)
         {
-            Debug.Log("y");
             moveY = 0.1f;
         }
 
         if (_hookInputAction.ReadValue<float>() > 0.5)
         {
-            Debug.Log("x");
             moveX = 0.1f;
         }
         if (_hookInputAction.ReadValue<float>() <= 0.5 && _hookInputAction.ReadValue<float>() >= -0.5)
@@ -74,7 +69,6 @@ public class TargetController : MonoBehaviour
         }
         if (_hookInputAction.ReadValue<float>() < -0.5)
         {
-            Debug.Log("x");
             moveX= -0.1f;
         }
 

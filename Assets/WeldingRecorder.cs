@@ -11,7 +11,7 @@ public class WeldingRecorder : MonoBehaviour
     public float weldWidth = 0.01f;
     public Material weldingMaterial; // Material for the welding effect
 
-    [Header("XR Controllers")]
+    [Header("Joystick")]
     public ActionBasedController rightHandController;
     public InputActionProperty activateAction;
 

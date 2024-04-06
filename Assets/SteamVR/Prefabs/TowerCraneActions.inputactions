@@ -68,6 +68,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "KeyBoard",
+                    "id": "41550099-aa37-4f48-a24f-6d33e71d12f2",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TrolleyMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f5cedbbb-e2ad-4ec6-bb80-5de702f78988",
+                    "path": "<Keyboard>/#(W)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "TrolleyMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "fe06b150-3a63-49ea-bf84-8bd7f4502737",
+                    "path": "<Keyboard>/#(S)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "TrolleyMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Controller",
                     "id": "4d171148-418a-400c-b3d3-a4857c691c53",
                     "path": "1DAxis",
@@ -96,6 +129,39 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Thrustmaster Joystick",
+                    "action": "HookMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "KeyBoard",
+                    "id": "cc028a8b-0ff1-4445-b62f-f9bd0052b6de",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HookMove",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a2329c01-19c0-4e71-9985-3377ef43b30e",
+                    "path": "<Keyboard>/#(A)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "HookMove",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "7ee7ef0b-7aac-4b9d-8166-383dec463288",
+                    "path": "<Keyboard>/#(D)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
                     "action": "HookMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -132,6 +198,39 @@
                     "action": "JibRotate",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "KeyBoard",
+                    "id": "9a4a3734-37ea-4a35-980f-e11e546b9874",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JibRotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "06957417-90fb-4fb8-a17c-ec4781d5f965",
+                    "path": "<Keyboard>/#(Q)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "JibRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "49668cb0-a6bd-4105-ab05-7943f211807c",
+                    "path": "<Keyboard>/#(E)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "JibRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
@@ -143,6 +242,17 @@
             "devices": [
                 {
                     "devicePath": "<HID::Thrustmaster T.A320 Pilot>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "KeyBoard",
+            "bindingGroup": "KeyBoard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
                     "isOptional": false,
                     "isOR": false
                 }
