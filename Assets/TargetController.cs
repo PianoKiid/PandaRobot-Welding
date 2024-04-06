@@ -20,8 +20,12 @@ public class TargetController : MonoBehaviour
     private float moveY;
     private float moveZ;
 
+    private GameObject Sparks;
+
     void Start()
     {
+        Sparks = GameObject.Find("Sparks");
+
         _towerCraneActionMap = towerCranePlayerInput.actions.FindActionMap("TowerCraneAction");
 
         _trolleyInputAction = _towerCraneActionMap.FindAction("TrolleyMove");
@@ -35,7 +39,6 @@ public class TargetController : MonoBehaviour
         
         if (_trolleyInputAction.ReadValue<float>() > 0.5)
         {
-            Debug.Log("z");
             moveZ = 0.1f;
         }
         if (_trolleyInputAction.ReadValue<float>() <= 0.5 && _trolleyInputAction.ReadValue<float>() >= -0.5)
@@ -44,13 +47,11 @@ public class TargetController : MonoBehaviour
         }
         if (_trolleyInputAction.ReadValue<float>() < -0.5)
         {
-            Debug.Log("z");
             moveZ = -0.1f;
         }
 
         if (_jibInputAction.ReadValue<float>() > 0.5)
         {
-            Debug.Log("y");
             moveY = -0.1f;
         }
         if (_jibInputAction.ReadValue<float>() <= 0.5 && _jibInputAction.ReadValue<float>() >= -0.5)
@@ -59,13 +60,11 @@ public class TargetController : MonoBehaviour
         }
         if (_jibInputAction.ReadValue<float>() < -0.5)
         {
-            Debug.Log("y");
             moveY = 0.1f;
         }
 
         if (_hookInputAction.ReadValue<float>() > 0.5)
         {
-            Debug.Log("x");
             moveX = 0.1f;
         }
         if (_hookInputAction.ReadValue<float>() <= 0.5 && _hookInputAction.ReadValue<float>() >= -0.5)
@@ -74,10 +73,18 @@ public class TargetController : MonoBehaviour
         }
         if (_hookInputAction.ReadValue<float>() < -0.5)
         {
-            Debug.Log("x");
             moveX= -0.1f;
         }
 
         transform.Translate(new Vector3(moveX, moveY, moveZ) * 0.01f);
+
+/*        if (~~~~~~~~~~~~)
+        {
+            Sparks.SetActive(true);
+        }
+        if (~~~~~~~~~~~~)
+        {
+            Sparks.SetActive(false);
+        }*/
     }
 }

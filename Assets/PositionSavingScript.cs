@@ -7,17 +7,16 @@ using UnityEngine;
 
 public class PositionSavingScript : MonoBehaviour
 {
-    public int UpdateCount = 0;
+    private int UpdateCount = 0;
     Vector3 tr;
     Vector3 trclone;
 
     List<Vector3> BasePosition = new List<Vector3>();
 
-    public int StartCount = 30;
+    public int LatencyCount = 30;
 
     public GameObject Target_Clone;
 
-    private bool latency = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,46 +28,26 @@ public class PositionSavingScript : MonoBehaviour
     void FixedUpdate()
     {
         UpdateCount++;
-/*        Debug.Log(UpdateCount);*/
+
+        Debug.Log(UpdateCount);
 
         tr = transform.position;
         BasePosition.Add(tr);
 
-        if (latency == false)
-        {
-            PositionClone();
-        }
-
-        if (UpdateCount == 500)
-        {
-            latency = true;
-        }
-
-        if (UpdateCount == 550 || UpdateCount == 650)
-        {
-            trclone = BasePosition[BasePosition.Count - 10];
-            Target_Clone.transform.position = trclone;
-        }
-
-        if (UpdateCount == 720)
-        {
-            latency = false;
-        }
-
-
+        PositionClone();
     }
 
     void PositionClone()
     {
 
-        if (UpdateCount <= StartCount + 1)
+        if (UpdateCount <= LatencyCount + 1)
         {
             trclone = BasePosition[0];
         }
 
-        if (UpdateCount >= StartCount + 1)
+        if (UpdateCount >= LatencyCount + 1)
         {
-            trclone =  BasePosition[BasePosition.Count - StartCount];
+            trclone =  BasePosition[BasePosition.Count - LatencyCount];
         }
 
         Target_Clone.transform.position = trclone;
