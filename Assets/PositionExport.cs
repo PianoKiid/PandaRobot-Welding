@@ -6,7 +6,8 @@ using System.Collections.Generic;
 
 public class PositionExport : MonoBehaviour
 {
-    private string m_FilePath = @"C:\Users\VR504-L\Desktop\Panda\Example.txt";
+    /*private string m_FilePath = @"C:\Users\VR504-L\Desktop\Panda\Example.txt";*/
+    private string m_FilePath = @"C:\Users\ssm92\OneDrive\πŸ≈¡ »≠∏È\Panda\Example.txt";
 
     private StreamWriter sw;
 
@@ -27,7 +28,7 @@ public class PositionExport : MonoBehaviour
     {
         position = target.transform.position;
 
-        sw.WriteLine("{0}, {1}, {2}", position.x, position.y, position.z);
+        sw.WriteLine("{0}, {1}, {2}, {3}", position.x, position.y, position.z, target.GetComponent<TargetController>().Iswelding);
     }
 
     void OnApplicationQuit()
