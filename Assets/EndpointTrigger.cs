@@ -5,6 +5,7 @@ using UnityEngine;
 public class EndpointTrigger : MonoBehaviour
 {
     public bool IsTriggered;
+    public TargetController targetcontoller;
 
     void OnEnable()
     {
@@ -13,7 +14,7 @@ public class EndpointTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "TCP")
+        if (other.tag == "TCP" && targetcontoller.Iswelding == true)
         {
             IsTriggered = true;
         }

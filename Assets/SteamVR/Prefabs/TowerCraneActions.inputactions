@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Trigger",
+                    "type": "Button",
+                    "id": "4de4388a-5442-4bb5-9d5e-3043ef566e2b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -229,6 +238,28 @@
                     "processors": "",
                     "groups": "KeyBoard",
                     "action": "JibRotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Controller",
+                    "id": "44bfc6c6-baba-4902-834f-37d41f9db716",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "3f65dce0-42df-4113-a3a2-0ece97ba7c7e",
+                    "path": "<HID::Thrustmaster T.A320 Pilot>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Thrustmaster Joystick",
+                    "action": "Trigger",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

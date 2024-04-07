@@ -15,12 +15,15 @@ public class TargetController : MonoBehaviour
     private InputAction _trolleyInputAction;
     private InputAction _hookInputAction;
     private InputAction _jibInputAction;
+    private InputAction _TriggerAction;
 
     private float moveX;
     private float moveY;
     private float moveZ;
 
     private GameObject Sparks;
+
+    public bool Iswelding;
 
     void Start()
     {
@@ -31,6 +34,7 @@ public class TargetController : MonoBehaviour
         _trolleyInputAction = _towerCraneActionMap.FindAction("TrolleyMove");
         _hookInputAction = _towerCraneActionMap.FindAction("HookMove");
         _jibInputAction = _towerCraneActionMap.FindAction("JibRotate");
+        _TriggerAction = _towerCraneActionMap.FindAction("Trigger");
     }
 
     // Update is called once per frame
@@ -39,7 +43,7 @@ public class TargetController : MonoBehaviour
         
         if (_trolleyInputAction.ReadValue<float>() > 0.5)
         {
-            moveZ = 0.1f;
+            moveZ = 0.05f;
         }
         if (_trolleyInputAction.ReadValue<float>() <= 0.5 && _trolleyInputAction.ReadValue<float>() >= -0.5)
         {
@@ -47,12 +51,12 @@ public class TargetController : MonoBehaviour
         }
         if (_trolleyInputAction.ReadValue<float>() < -0.5)
         {
-            moveZ = -0.1f;
+            moveZ = -0.05f;
         }
 
         if (_jibInputAction.ReadValue<float>() > 0.5)
         {
-            moveY = -0.1f;
+            moveY = -0.05f;
         }
         if (_jibInputAction.ReadValue<float>() <= 0.5 && _jibInputAction.ReadValue<float>() >= -0.5)
         {
@@ -60,12 +64,12 @@ public class TargetController : MonoBehaviour
         }
         if (_jibInputAction.ReadValue<float>() < -0.5)
         {
-            moveY = 0.1f;
+            moveY = 0.05f;
         }
 
         if (_hookInputAction.ReadValue<float>() > 0.5)
         {
-            moveX = 0.1f;
+            moveX = 0.05f;
         }
         if (_hookInputAction.ReadValue<float>() <= 0.5 && _hookInputAction.ReadValue<float>() >= -0.5)
         {
@@ -73,18 +77,22 @@ public class TargetController : MonoBehaviour
         }
         if (_hookInputAction.ReadValue<float>() < -0.5)
         {
-            moveX= -0.1f;
+            moveX= -0.05f;
+        }
+
+        if (_TriggerAction.ReadValue<float>() == 1.0)
+        {
+            Sparks.SetActive(true);
+
+            Iswelding = true;
+        }
+        if (_TriggerAction.ReadValue<float>() == 0.0)
+        {
+            Sparks.SetActive(false);
+            Iswelding = false;
         }
 
         transform.Translate(new Vector3(moveX, moveY, moveZ) * 0.01f);
 
-/*        if (~~~~~~~~~~~~)
-        {
-            Sparks.SetActive(true);
-        }
-        if (~~~~~~~~~~~~)
-        {
-            Sparks.SetActive(false);
-        }*/
     }
 }

@@ -11,44 +11,49 @@ public class CloneStopping : MonoBehaviour
 
     public GameObject Target_CloneClone;
 
+    private SceneManager SceneManager;
+
+    public GameObject DelayPoint1;
+    public GameObject DelayPoint2;
+
     private bool latency = false;
 
-
-    // Update is called once per frame
-    void FixedUpdate()
+    void Start()
     {
-
-        UpdateCount++;
-
-        if (latency == false)
-        {
-            PositionCloneClone();
-        }
-
-        if (UpdateCount == 500)
-        {
-            latency = true;
-        }
-
-        /*        if (UpdateCount == 550 || UpdateCount == 650)
-                {
-                    trclone = BasePosition[BasePosition.Count - 10];
-                    Target_Clone.transform.position = trclone;
-                }*/
-
-        if (UpdateCount == 570)
-        {
-            latency = false;
-        }
-
-
+        SceneManager = GameObject.Find("SceneManager").GetComponent<SceneManager>();
     }
 
-    void PositionCloneClone()
-    {
+        // Update is called once per frame
+        void FixedUpdate()
+        {
 
-        Target_CloneClone.transform.position = transform.position;
+            UpdateCount++;
 
-    }
+            if (DelayPoint1.GetComponent<DelayPointTrigger1>().Isdelay1 == false && DelayPoint2.GetComponent<DelayPointTrigger1>().Isdelay1 == false)
+            {
+                latency = false;
+            }
+
+            if (DelayPoint1.GetComponent<DelayPointTrigger1>().Isdelay1 == true || DelayPoint2.GetComponent<DelayPointTrigger1>().Isdelay1 == true)
+            {
+                latency = true;
+            }
+
+            if (latency == false)
+            {
+                PositionCloneClone();
+            }
+
+        Debug.Log(latency);
+
+
+        }
+
+        void PositionCloneClone()
+        {
+
+            Target_CloneClone.transform.position = transform.position;
+
+        }
 
 }

@@ -13,7 +13,7 @@ public class PositionSavingScript : MonoBehaviour
 
     List<Vector3> BasePosition = new List<Vector3>();
 
-    public int LatencyCount = 30;
+    public int LatencyCount = 1;
 
     public GameObject Target_Clone;
 
@@ -28,8 +28,6 @@ public class PositionSavingScript : MonoBehaviour
     void FixedUpdate()
     {
         UpdateCount++;
-
-        Debug.Log(UpdateCount);
 
         tr = transform.position;
         BasePosition.Add(tr);
