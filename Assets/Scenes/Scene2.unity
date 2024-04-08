@@ -1150,11 +1150,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385739224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: -0.288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1668405627}
+  m_Father: {fileID: 848204482}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &385739226
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetcontoller: {fileID: 102827982}
   Isdelay1: 0
-  delaytime: 3.5
+  delaytime: 4.5
 --- !u!114 &385739227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7458,12 +7458,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757093126}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.003857602, z: 1.1043334}
-  m_LocalScale: {x: 30.2715, y: 1, z: 0.033983093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.32, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1882205850}
+  m_Father: {fileID: 770070725}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &757093128
@@ -7480,7 +7480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetcontoller: {fileID: 102827982}
   Isdelay1: 0
-  delaytime: 2.8
+  delaytime: 5.2
 --- !u!135 &757093129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7536,6 +7536,7 @@ Transform:
   - {fileID: 1854052193}
   - {fileID: 424357438}
   - {fileID: 309670062}
+  - {fileID: 757093127}
   m_Father: {fileID: 568467950}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7948,6 +7949,7 @@ Transform:
   - {fileID: 1062054833}
   - {fileID: 1158553063}
   - {fileID: 697765456}
+  - {fileID: 385739225}
   m_Father: {fileID: 568467950}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11513,7 +11515,6 @@ Transform:
   - {fileID: 384227873}
   - {fileID: 1143269696}
   - {fileID: 308065161}
-  - {fileID: 385739225}
   m_Father: {fileID: 568467950}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12251,7 +12252,6 @@ Transform:
   - {fileID: 1565610167}
   - {fileID: 1366144136}
   - {fileID: 1547880506}
-  - {fileID: 757093127}
   m_Father: {fileID: 568467950}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
