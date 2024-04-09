@@ -16,7 +16,6 @@ public class SceneManager : MonoBehaviour
     private GameObject Welded;
 
     private StartpointTrigger StartpointTrigger;
-    private EndpointTrigger EndpointTrigger;
 
     private MeshRenderer meshRenderer;
 
@@ -36,7 +35,6 @@ public class SceneManager : MonoBehaviour
         Welded = NowWelding.transform.GetChild(2).gameObject;
 
         StartpointTrigger = Startpoint.GetComponent<StartpointTrigger>();
-        EndpointTrigger = Endpoint.GetComponent<EndpointTrigger>();
 
         Startpoint.SetActive(true);
         Endpoint.SetActive(false);
@@ -45,7 +43,7 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EndpointTrigger.IsTriggered == true)
+        if (Input.GetKeyDown(KeyCode.Space) == true)
         {
             SceneCountSetting();
         }
@@ -78,7 +76,6 @@ public class SceneManager : MonoBehaviour
         Welded = NowWelding.transform.GetChild(2).gameObject;
 
         StartpointTrigger = Startpoint.GetComponent<StartpointTrigger>();
-        EndpointTrigger = Endpoint.GetComponent<EndpointTrigger>();
 
         Startpoint.SetActive(true);
         Endpoint.SetActive(false);
@@ -90,17 +87,17 @@ public class SceneManager : MonoBehaviour
     {
         if (SceneCount == 2)
         {
-            Models.transform.position = Vector3.Lerp(Models.transform.position, new Vector3(6.474f, -0.531f, 0.8299817f), Time.deltaTime*0.2f);
+            Models.transform.position = Vector3.Lerp(Models.transform.position, new Vector3(6.474f, -0.531f, 0.8299817f), Time.deltaTime*0.5f);
         }
 
         if (SceneCount == 4)
         {
-            Models.transform.position = Vector3.Lerp(Models.transform.position, new Vector3(5.901f, -0.859f, 0.8299817f), Time.deltaTime*0.2f);
+            Models.transform.position = Vector3.Lerp(Models.transform.position, new Vector3(5.901f, -0.859f, 0.8299817f), Time.deltaTime*0.5f);
         }
 
         if (SceneCount == 6)
         {
-            Models.transform.position = Vector3.Lerp(Models.transform.position, new Vector3(5.901f, -0.531f, 0.8299817f), Time.deltaTime*0.2f);
+            Models.transform.position = Vector3.Lerp(Models.transform.position, new Vector3(5.901f, -0.531f, 0.8299817f), Time.deltaTime*0.5f);
         }
     }
 
